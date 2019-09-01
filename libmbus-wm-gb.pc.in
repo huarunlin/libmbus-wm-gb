@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libmbus-wm-gb
+Description: WaterMeter M-bus GB library.
+Requires: 
+Version: @PACKAGE_VERSION@
+URL: https://github.com/huarunlin/libmbus-wm-gb
+Libs: -L${libdir} -lmbus-wm-gb
+Cflags: -I${includedir}

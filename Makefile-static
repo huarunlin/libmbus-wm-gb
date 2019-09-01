@@ -1,0 +1,20 @@
+LIB = libmbus-wm-gb.so
+
+CFLAGS = -Wall -W -g -fPIC -I.
+HEADERS = mbus.h mbus-protocol.h
+OBJS    = mbus.o mbus-protocol.o
+
+$(LIB): $(OBJS)
+	gcc -shared -o $(LIB) $(OBJS)
+
+all: $(LIB)
+
+clean:
+	rm -rf *.o *core core $(LIB)
+
+test:
+
+
+install: all
+	cp $(LIB) /usr/local/lib
+	cp $(HEADERS) /usr/local/include
